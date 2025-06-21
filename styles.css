@@ -115,7 +115,7 @@ body {
 }
 
 .early-access {
-    margin-top: 1rem;
+    margin-top: 4rem;
 }
 
 .access-title {
@@ -140,12 +140,12 @@ body {
     letter-spacing: 138%;
     color: #000000;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .email-form {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 3rem auto 0 auto;
 }
 
 .form-group {
