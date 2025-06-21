@@ -416,7 +416,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 40px;
     background: linear-gradient(135deg, #f8f9fa 0%, #e5f7ea 100%);
 }
 
@@ -435,35 +435,52 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #1a1a1a;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 2.5rem;
+    line-height: 108%;
 }
 
 .hero-description {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 2rem;
+    line-height: 160%;
 }
 
 .hero-subtitle {
-    font-size: 1rem;
-    color: #888;
-    margin-bottom: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    line-height: 160%;
+}
+
+.hero-subtitle-regular {
+    font-family: 'Outfit', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 3rem;
+    line-height: 160%;
 }
 
 .cta-btn {
     background: #008000;
     color: white;
     border: none;
-    padding: 1.2rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 1.2rem 3.5rem;
+    font-size: 18px;
     font-weight: 600;
-    border-radius: 50px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-family: 'Outfit', sans-serif;
 }
 
 .cta-btn:hover {
