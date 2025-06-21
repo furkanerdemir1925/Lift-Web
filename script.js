@@ -50,18 +50,41 @@ document.addEventListener('DOMContentLoaded', function() {
     // Email form submission
     const emailForm = document.querySelector('.email-form');
     if (emailForm) {
-        emailForm.addEventListener('submit', function(e) {
+        emailForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const emailInput = this.querySelector('.email-input');
+            const submitBtn = this.querySelector('.subscribe-btn');
             const email = emailInput.value.trim();
             
             if (email && validateEmail(email)) {
-                // Show success message
-                showNotification('Teşekkürler! E-posta adresiniz kaydedildi.', 'success');
-                emailInput.value = '';
+                // Disable button during submission
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Gönderiliyor...';
+                
+                try {
+                    // Google Apps Script deployment URL
+                    const response = await fetch('https://script.google.com/macros/s/AKfycbw3lLEGCCg_vBjOy69oRiaOOg20HGgjXcwrE7Yw4qisOBGXmo51tME9cIk0VdTMMlD3/exec', {
+                        method: 'POST',
+                        body: new URLSearchParams({ email: email })
+                    });
+                    
+                    if (response.ok) {
+                        showNotification('🎉 Teşekkürler! E-posta adresiniz başarıyla kaydedildi.', 'success');
+                        emailInput.value = '';
+                    } else {
+                        throw new Error('Server error');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    showNotification('❌ Bir hata oluştu. Lütfen tekrar deneyin.', 'error');
+                } finally {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Subscribe';
+                }
             } else {
-                showNotification('Lütfen geçerli bir e-posta adresi giriniz.', 'error');
+                showNotification('⚠️ Lütfen geçerli bir e-posta adresi giriniz.', 'error');
             }
         });
     }
