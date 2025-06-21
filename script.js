@@ -177,8 +177,9 @@ function showNotification(message, type) {
     notification.style.cssText = `
         position: fixed;
         top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? '#22c55e' : '#ef4444'};
+        left: 50%;
+        transform: translateX(-50%) translateY(-100px);
+        background: #008000;
         color: white;
         padding: 1rem 1.5rem;
         border-radius: 10px;
@@ -187,7 +188,6 @@ function showNotification(message, type) {
         display: flex;
         align-items: center;
         gap: 1rem;
-        transform: translateX(400px);
         transition: transform 0.3s ease;
     `;
 
@@ -206,12 +206,12 @@ function showNotification(message, type) {
 
     // Animate in
     setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
+        notification.style.transform = 'translateX(-50%) translateY(0)';
     }, 100);
 
     // Auto remove after 5 seconds
     setTimeout(() => {
-        notification.style.transform = 'translateX(400px)';
+        notification.style.transform = 'translateX(-50%) translateY(-100px)';
         setTimeout(() => {
             if (notification.parentNode) {
                 notification.remove();
@@ -221,7 +221,7 @@ function showNotification(message, type) {
 
     // Close button functionality
     closeBtn.addEventListener('click', () => {
-        notification.style.transform = 'translateX(400px)';
+        notification.style.transform = 'translateX(-50%) translateY(-100px)';
         setTimeout(() => {
             if (notification.parentNode) {
                 notification.remove();
