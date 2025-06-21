@@ -938,7 +938,7 @@ body {
 
 /* Final CTA Section */
 .final-cta-section {
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 .final-cta-section .container {
@@ -1333,7 +1333,7 @@ body {
     
     .cta-container {
         padding: 4rem 1.5rem;
-        margin: 0 1rem;
+        margin: 0;
     }
     
     /* Footer */
