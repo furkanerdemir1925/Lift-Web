@@ -59,6 +59,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add animation to circles
     animateCircles();
     
+    // Testimonial cards interactivity
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    testimonialCards.forEach(card => {
+        card.addEventListener('click', function() {
+            // Remove active class from all cards
+            testimonialCards.forEach(c => c.classList.remove('active'));
+            // Add active class to clicked card
+            this.classList.add('active');
+        });
+    });
+
     // Add intersection observer for animations
     const observerOptions = {
         threshold: 0.1,
