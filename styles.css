@@ -172,8 +172,8 @@ body {
     transform: translateX(2px);
 }
 
-/* Animated Background Circles */
-.bg-circles {
+/* Grid Background */
+.grid-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -183,67 +183,141 @@ body {
     z-index: 1;
 }
 
-.circle {
+.grid-lines {
     position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(22, 163, 74, 0.1));
-    animation: float 6s ease-in-out infinite;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(34, 197, 94, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.08) 1px, transparent 1px);
+    background-size: 100px 100px;
+    animation: gridPulse 4s ease-in-out infinite;
 }
 
-.circle-1 {
-    width: 80px;
-    height: 80px;
-    top: 20%;
-    left: 10%;
+.grid-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #22c55e, #16a34a);
+    box-shadow: 
+        0 0 20px rgba(34, 197, 94, 0.4),
+        0 0 40px rgba(34, 197, 94, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: orbitFloat 8s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 60px;
+    height: 60px;
+    top: 15%;
+    left: 8%;
     animation-delay: 0s;
 }
 
-.circle-2 {
-    width: 120px;
-    height: 120px;
-    top: 60%;
-    right: 15%;
-    animation-delay: 2s;
+.orb-2 {
+    width: 80px;
+    height: 80px;
+    top: 75%;
+    right: 12%;
+    animation-delay: 1.5s;
 }
 
-.circle-3 {
-    width: 60px;
-    height: 60px;
-    bottom: 30%;
-    left: 20%;
-    animation-delay: 4s;
-}
-
-.circle-4 {
-    width: 100px;
-    height: 100px;
-    top: 15%;
-    right: 25%;
-    animation-delay: 1s;
-}
-
-.circle-5 {
-    width: 140px;
-    height: 140px;
-    bottom: 15%;
-    right: 30%;
+.orb-3 {
+    width: 45px;
+    height: 45px;
+    bottom: 35%;
+    left: 15%;
     animation-delay: 3s;
 }
 
-.circle-6 {
+.orb-4 {
     width: 90px;
     height: 90px;
-    top: 40%;
-    left: 5%;
-    animation-delay: 5s;
+    top: 20%;
+    right: 85%;
+    animation-delay: 0.8s;
 }
 
-@keyframes float {
+.orb-5 {
+    width: 70px;
+    height: 70px;
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 2.5s;
+}
+
+.orb-6 {
+    width: 55px;
+    height: 55px;
+    top: 45%;
+    left: 3%;
+    animation-delay: 4s;
+}
+
+.orb-7 {
+    width: 65px;
+    height: 65px;
+    top: 55%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.orb-8 {
+    width: 50px;
+    height: 50px;
+    bottom: 55%;
+    left: 25%;
+    animation-delay: 3.5s;
+}
+
+.orb-9 {
+    width: 75px;
+    height: 75px;
+    top: 8%;
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.orb-10 {
+    width: 40px;
+    height: 40px;
+    bottom: 8%;
+    right: 45%;
+    animation-delay: 4.5s;
+}
+
+@keyframes orbitFloat {
     0%, 100% {
-        transform: translateY(0px) rotate(0deg);
+        transform: translateY(0px) scale(1);
+        opacity: 0.8;
+    }
+    25% {
+        transform: translateY(-15px) scale(1.05);
+        opacity: 1;
     }
     50% {
-        transform: translateY(-20px) rotate(180deg);
+        transform: translateY(-25px) scale(1.1);
+        opacity: 0.9;
+    }
+    75% {
+        transform: translateY(-10px) scale(1.02);
+        opacity: 1;
+    }
+}
+
+@keyframes gridPulse {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
     }
 }
 
