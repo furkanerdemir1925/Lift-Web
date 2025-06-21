@@ -16,6 +16,15 @@ body {
     background-size: 50px 50px;
 }
 
+/* Landing Page Specific Styles */
+.landing-page {
+    background-color: #ffffff !important;
+    background-image: 
+        linear-gradient(#DDDDDD 1px, transparent 1px),
+        linear-gradient(90deg, #DDDDDD 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+}
+
 /* Navigation Styles */
 .navbar {
     position: fixed;
@@ -406,6 +415,10 @@ body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e5f7ea 100%);
 }
 
+.landing-page .hero-section {
+    background: transparent !important;
+}
+
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -491,6 +504,10 @@ body {
     background: white;
 }
 
+.landing-page .what-is-lift-section {
+    background: transparent !important;
+}
+
 .what-is-lift-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -528,6 +545,10 @@ body {
     text-align: center;
 }
 
+.landing-page .start-section {
+    background: transparent !important;
+}
+
 .start-title {
     font-size: 2.5rem;
     font-weight: 800;
@@ -548,6 +569,10 @@ body {
 .pricing-section {
     padding: 6rem 0;
     background: white;
+}
+
+.landing-page .pricing-section {
+    background: transparent !important;
 }
 
 .pricing-grid {
