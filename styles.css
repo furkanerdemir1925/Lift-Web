@@ -716,11 +716,15 @@ body {
 }
 
 .pricing-card {
-    background: #f8f9fa;
+    background: transparent;
+    border: 2px solid #efefef;
     padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .pricing-card:hover {
@@ -728,23 +732,25 @@ body {
 }
 
 .pricing-card.featured {
-    background: linear-gradient(135deg, #008000, #006600);
-    color: white;
+    background: transparent;
+    border: 2px solid #efefef;
+    color: #000000;
 }
 
 .pricing-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: #000000;
 }
 
 .pricing-subtitle {
-    color: #666;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
 .pricing-card.featured .pricing-subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: #000000;
 }
 
 .pricing-features {
@@ -756,18 +762,19 @@ body {
     margin-bottom: 0.75rem;
     padding-left: 1.5rem;
     position: relative;
+    color: #000000;
 }
 
 .pricing-features li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #008000;
+    color: #000000;
     font-weight: bold;
 }
 
 .pricing-card.featured .pricing-features li::before {
-    color: white;
+    color: #000000;
 }
 
 .pricing-btn {
@@ -775,7 +782,7 @@ body {
     color: white;
     border: none;
     padding: 1rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 8px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -799,12 +806,12 @@ body {
 }
 
 .pricing-card.featured .pricing-btn {
-    background: white;
-    color: #008000;
+    background: #008000;
+    color: white;
 }
 
 .pricing-card.featured .pricing-btn:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: #006600;
 }
 
 /* Testimonials Section */
