@@ -61,12 +61,40 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Testimonial cards interactivity
     const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const testimonialText = document.querySelector('.testimonial-content p:first-child');
+    const testimonialAuthor = document.querySelector('.testimonial-author');
+    
+    // Testimonial data
+    const testimonials = {
+        emily: {
+            text: '"I used to jump from one routine to another, always searching for something that worked—but nothing ever stuck. Since starting LIFT, I finally have a structure that supports me consistently. Even on tough days when motivation is low, this system keeps me grounded."',
+            author: '— Emily, Phase 1'
+        },
+        james: {
+            text: '"I thought I was signing up for better productivity, but what I found was much deeper. With LIFT, I feel aligned with who I really am and what I value. I\'m not just getting more done—I\'m moving with purpose. That shift was unexpected, and it changed everything."',
+            author: '— James, Phase 3'
+        },
+        mila: {
+            text: '"Before LIFT, I was constantly stuck in my head—overthinking every little thing and going in circles without moving forward. LIFT helped me break that cycle. Now, I simply show up for myself every single day, with calm and clarity. No more mental noise. No mental drama."',
+            author: '— Mila, Phase 2'
+        }
+    };
+    
     testimonialCards.forEach(card => {
         card.addEventListener('click', function() {
             // Remove active class from all cards
             testimonialCards.forEach(c => c.classList.remove('active'));
             // Add active class to clicked card
             this.classList.add('active');
+            
+            // Update testimonial content
+            const testimonialKey = this.getAttribute('data-testimonial');
+            const testimonialData = testimonials[testimonialKey];
+            
+            if (testimonialData && testimonialText && testimonialAuthor) {
+                testimonialText.textContent = testimonialData.text;
+                testimonialAuthor.textContent = testimonialData.author;
+            }
         });
     });
 
