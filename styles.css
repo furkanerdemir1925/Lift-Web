@@ -35,10 +35,9 @@ body {
     padding: 0 2rem;
 }
 
-.nav-logo h2 {
-    color: #008000;
-    font-size: 1.8rem;
-    font-weight: 800;
+.nav-logo img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -50,22 +49,24 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #666;
-    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #008000;
+    color: rgba(0, 0, 0, 1);
 }
 
 .nav-btn {
     background: #008000;
-    color: white;
+    color: #ffffff;
     padding: 0.75rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
     transition: all 0.3s ease;
 }
 
