@@ -1108,10 +1108,28 @@ body {
     
     .hamburger {
         display: flex;
+        order: 1;
+    }
+    
+    .nav-logo {
+        order: 2;
+        position: absolute;
+        left: 48%;
+        transform: translateX(-50%);
+    }
+    
+    .nav-btn {
+        order: 3;
+        margin-left: auto;
+        padding: 0.6rem 1.2rem;
+        font-size: 16px;
     }
     
     .nav-container {
         padding: 0 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
     }
     
     /* Hero Section */
