@@ -522,11 +522,30 @@ body {
     justify-content: center;
 }
 
+.hero-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-img-frame {
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    background: #E0E2DE;
+    border-radius: 32px;
+    transform: rotate(5deg);
+    top: -2.5px;
+    left: -2.5px;
+    z-index: 1;
+}
+
 .hero-img {
     width: 150px;
     height: 150px;
-    border-radius: 12px;
+    border-radius: 32px;
     object-fit: cover;
+    position: relative;
+    z-index: 2;
 }
 
 .empty-space {
